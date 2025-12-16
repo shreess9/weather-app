@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WeatherNow</title>
+
+  <!-- ✅ THIS LINE IS REQUIRED -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-wrapper">
+    <div class="container">
+
+
+      <h1>🌦️ WeatherNow</h1>
+      <p class="subtitle">Real-time weather information</p>
+
+      <div class="unit-toggle">
+        <button id="celsiusBtn" class="active" onclick="setUnit('metric')">°C</button>
+        <button id="fahrenheitBtn" onclick="setUnit('imperial')">°F</button>
+      </div>
+
+      <div class="search-box">
+        <div class="search-row">
+          <input type="text" id="city" placeholder="Enter city name">
+          <button onclick="getWeather()">Search</button>
+        </div>
+
+        <button class="location-btn" onclick="getLocationWeather()">
+          📍 Use My Location
+        </button>
+      </div>
+      <div id="loader" class="loader hidden"></div>
+      <div id="result" class="weather-card"></div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
